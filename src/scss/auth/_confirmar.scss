@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.confirmar {
+    color: v.$moradoclaro;
+    margin-top: 5rem;
+    .uptask {
+      background-color: v.$moradoclaro;
+       color: v.$moradoclaro;
+       text-align: center;
+       background-clip: text;
+       font-size: 7rem;
+
+       @include m.tablet {
+           font-size: 10rem;
+       }
+    }
+
+    input[type="submit"] {
+        @include m.boton(v.$moradoclaro, v.$blanco);
+    }
+
+    .acciones {
+        a {
+            color: v.$moradoclaro;
+        }
+    }
+
+    input {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        background-color: lighten(v.$morado, 60%)
+    }
+}
+
+
+.descripcion-pagina {
+    
+    text-align: center;
+}

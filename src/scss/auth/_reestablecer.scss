@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.reestablecer {
+    color: v.$oro;
+    margin-top: 5rem;
+    .uptask {
+      background-color: v.$oro;
+       color: v.$oro;
+       text-align: center;
+       background-clip: text;
+       font-size: 7rem;
+
+       @include m.tablet {
+           font-size: 10rem;
+       }
+    }
+
+    input[type="submit"] {
+        @include m.boton(v.$oro, v.$blanco);
+    }
+
+    .acciones {
+        a {
+            color: v.$oro;
+        }
+    }
+
+    input {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        background-color: lighten(v.$oro, 60%)
+    }
+}
+
+
+.descripcion-pagina {
+    
+    text-align: center;
+}

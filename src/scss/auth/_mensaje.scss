@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.mensaje {
+    color: v.$negro;
+    margin-top: 5rem;
+    .uptask {
+      background-color: v.$negro;
+       color: v.$negro;
+       text-align: center;
+       background-clip: text;
+       font-size: 7rem;
+
+       @include m.tablet {
+           font-size: 10rem;
+       }
+    }
+
+    input[type="submit"] {
+        @include m.boton(v.$negro, v.$blanco);
+    }
+
+    .acciones {
+        a {
+            color: v.$negro;
+        }
+    }
+
+    input {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        background-color: lighten(v.$negro, 60%)
+    }
+}
+
+
+.descripcion-pagina {
+    
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.login {
+    color: v.$nuevo;
+    margin-top: 5rem;
+    .uptask {
+       background: v.$morado;
+       color: v.$nuevo;
+       text-align: center;
+       background-clip: text;
+       font-size: 7rem;
+
+       @include m.tablet {
+           font-size: 10rem;
+       }
+    }
+
+    input[type="submit"] {
+        @include m.boton(v.$nuevo, v.$blanco);
+    }
+
+    .acciones {
+        a {
+            color: v.$nuevo;
+        }
+    }
+
+    
+.tagline {
+    font-family: v.$fuente_headings;
+    font-weight: 900;
+    color: v.$nuevo;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.descripcion-pagina {
+    text-align: center;
+}
+}

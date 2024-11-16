@@ -1,0 +1,47 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.crear {
+    color: v.$morado;
+    margin-top: 5rem;
+    .uptask {
+      background-color: v.$morado;
+       color: v.$morado;
+       text-align: center;
+       background-clip: text;
+       font-size: 7rem;
+
+       @include m.tablet {
+           font-size: 10rem;
+       }
+    }
+
+    input[type="submit"] {
+        @include m.boton(v.$morado, v.$blanco);
+    }
+
+    .acciones {
+        a {
+            color: v.$morado;
+        }
+    }
+
+    input {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        background-color: lighten(v.$cyan, 60%)
+    }
+}
+
+.tagline {
+    font-family: v.$fuente_headings;
+    font-weight: 900;
+    color: v.$morado;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.descripcion-pagina {
+    text-align: center;
+}

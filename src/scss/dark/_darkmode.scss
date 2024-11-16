@@ -1,0 +1,124 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+@media (prefers-color-scheme: dark) {
+    $gris: #2c2c3b;
+    body {
+        background-color: $gris;
+    }
+
+    .tagline,
+    .formulario label,
+    .login .acciones a,
+    .crear .acciones a,
+    .olvide .acciones a {
+        color: v.$blanco;
+    }
+    .descripcion-pagina,
+    .formulario .campo input,
+    .nombre-pagina {
+        color: darken(v.$gris, 15%);
+    }
+
+    .formulario .campo input {
+        background-color: lighten( $gris, 25% );
+        &::placeholder {
+            color: darken(v.$gris, 30%);
+        }
+    }
+
+    .alerta.error {
+        background-color: v.$blanco;
+    }
+
+
+    .sidebar {
+        @include m.tablet {
+            background-color: darken($gris, 5%);
+        }
+        .sidebar-nav a {
+            &.activo,
+            &:hover {
+                background-color: v.$naranja;
+            }
+        }
+    }
+
+    .barra-mobile,
+    .barra {
+        background-color: darken($gris, 7%);
+    }
+    .barra {
+        p {
+            color: v.$naranja;
+            span {
+                color: v.$gris;
+            }
+        }
+        .cerrar-sesion {
+            @include m.boton(v.$naranja, v.$blanco);
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    .filtros {
+        background-color: lighten($gris, 10%);
+        h2,
+        label {
+            color: v.$blanco;
+        }
+        input[type="radio"] {
+            accent-color: v.$naranja;
+        }
+    }
+
+    .dashboard {
+        background-color: $gris;
+
+        .enlace {
+            color: v.$gris;
+            &:hover {
+                color: darken(v.$gris, 20%);
+            }
+        }
+        .formulario input:not([type=submit]) {
+            background-color: lighten( $gris, 20%);
+            color: v.$blanco;
+            &::placeholder {
+                color: darken(v.$gris, 30%);
+            }
+        }
+    }
+
+    .listado-proyectos .proyecto {
+        background-color: lighten($gris, 20%);
+        &:hover {
+            background-color: lighten($gris, 15%);
+        }
+    }
+    .listado-tareas .tarea {
+        background-color: lighten($gris, 10%);
+        border: none;
+        p {
+            color: v.$gris;
+        }
+    }
+
+    .modal .formulario {
+        background-color: $gris;
+        input[type="text"] {
+            background-color: lighten( $gris, 20%);
+            border: none;
+            color: v.$blanco;
+            &::placeholder {
+                color: darken(v.$gris, 20%);
+            }
+        }
+        
+        legend {
+            color: v.$gris;
+        }
+    }
+
+}

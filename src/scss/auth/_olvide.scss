@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.olvide {
+    color: v.$rojo;
+    margin-top: 5rem;
+    .uptask {
+      background-color: v.$rojo;
+       color: v.$rojo;
+       text-align: center;
+       background-clip: text;
+       font-size: 7rem;
+
+       @include m.tablet {
+           font-size: 10rem;
+       }
+    }
+
+    input[type="submit"] {
+        @include m.boton(v.$rojo, v.$blanco);
+    }
+
+    .acciones {
+        a {
+            color: v.$rojo;
+        }
+    }
+
+    input {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        background-color: lighten(v.$cyan, 60%)
+    }
+}
+
+
+.descripcion-pagina {
+    
+    text-align: center;
+}
